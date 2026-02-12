@@ -1,1 +1,63 @@
+/* خلفية الصفحة */
+body {
+    background-color: #e6f2ff; /* أزرق فاتح */
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+/* البطاقة البيضاء للنموذج */
+.form-card {
+    background-color: #ffffff;
+    padding: 30px 40px;
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0,0,0,0.1);
+    width: 350px;
+}
+
+/* العنوان */
+.form-card h2 {
+    text-align: center;
+    color: #333333;
+    margin-bottom: 25px;
+}
+
+/* الحقول */
+.form-card label {
+    display: block;
+    color: #555555;
+    margin-bottom: 5px;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.form-card input {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+    font-size: 14px;
+}
+
+/* زر الإرسال */
+.form-card button {
+    width: 100%;
+    padding: 12px;
+    background-color: #0073e6; /* أزرق رسمي */
+    color: white;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.form-card button:hover {
+    background-color: #005bb5; /* أزرق أغمق عند المرور */
+}
 
