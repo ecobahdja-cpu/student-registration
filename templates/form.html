@@ -1,17 +1,32 @@
 <!DOCTYPE html>
-<html>
+<html lang="ar">
 <head>
+    <meta charset="UTF-8">
     <title>تسجيل التلاميذ</title>
+    <!-- ربط ملف CSS -->
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
 </head>
 <body>
-    <h2>تسجيل معلومات التلاميذ</h2>
-    <form action="/submit" method="POST">
-        اللقب: <input type="text" name="last_name" required><br>
-        الاسم: <input type="text" name="first_name" required><br>
-        القسم: <input type="text" name="class" required><br>
-        الفوج: <input type="text" name="group" required><br>
-        الهاتف: <input type="text" name="phone" required><br>
-        <button type="submit">إرسال</button>
-    </form>
+    <div class="form-card">
+        <h2>استمارة تسجيل معلومات التلميذ</h2>
+        <form action="/submit" method="POST">
+            <label for="last_name">اللقب:</label>
+            <input type="text" id="last_name" name="last_name" placeholder="أدخل اللقب" required>
+
+            <label for="first_name">الاسم:</label>
+            <input type="text" id="first_name" name="first_name" placeholder="أدخل الاسم" required>
+
+            <label for="class">القسم:</label>
+            <input type="text" id="class" name="class" placeholder="أدخل القسم" required>
+
+            <label for="group">الفوج:</label>
+            <input type="text" id="group" name="group" placeholder="أدخل الفوج" required>
+
+            <label for="phone">الهاتف:</label>
+            <input type="text" id="phone" name="phone" placeholder="أدخل رقم الهاتف" required>
+
+            <button type="submit">تأكيد التسجيل</button>
+        </form>
+    </div>
 </body>
 </html>
