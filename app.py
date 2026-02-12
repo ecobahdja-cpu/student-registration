@@ -28,7 +28,7 @@ def submit():
     # قراءة آخر id لإعطاء رقم تسلسلي
     with open(CSV_FILE, mode='r', newline='', encoding='utf-8') as file:
         reader = csv.reader(file)
-        next(reader)  # تخطي رأس الجدول
+        next(reader)
         rows = list(reader)
         last_id = int(rows[-1][0]) if rows else 0
         new_id = last_id + 1
@@ -46,15 +46,10 @@ def admin():
     students = []
     with open(CSV_FILE, mode='r', newline='', encoding='utf-8') as file:
         reader = csv.reader(file)
-        next(reader)  # تخطي رأس الجدول
+        next(reader)
         for row in reader:
             students.append(row)
 
     # ترتيب حسب القسم ثم الفوج
     students.sort(key=lambda x: (x[3], x[4]))
     return render_template('admin.html', students=students)
-
-# === تعديل مهم لتشغيل التطبيق على Railway ===
-if __name__ == '__main__':
-    port = int(os.environ.get('PORT', 5000))
-    app.run(host='0.0.0.0', port=port)
